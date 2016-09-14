@@ -1,0 +1,55 @@
+<!-- walter 14.09.2016 - Botão Save Facebook -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 
+    *O meta og:image precisa chamar uma imagem (96 x 96);
+    **Ela precisa estar hospedada em um diretório e ser chamada com sua URL absoluta.
+    -->
+    <meta property="og:image" content="http://placehold.it/96x96" />
+    <meta property="og:title" content="Seu Título" />
+    <meta property="og:description" content="Descrição" />
+    <title>Monta Botão Facebook - URL Dinâmica</title>
+</head>
+
+<body>
+    <!-- Carrega o Facebook SDK / ID -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+    /* facebook sdk */
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk/xfbml.save.js#xfbml=1&version=v2.7&appId={{seu ID}}";
+        js.async = 'true';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <!-- Div que receberá o botão -->
+    <div id="botaoSalvarFace"></div>
+    
+    <script type="text/javascript">
+    
+    // Pega URL completa protocolo + host + pathname
+    var URL =
+        window.location.protocol + "//" +
+        window.location.host + "/" +
+        window.location.pathname;
+
+    // Pego a <div id='botaoSalvarFace'> que vai receber o botão
+    // Monto o Link concatenando
+    // Coloco ele dentro da <div id='botaoSalvarFace'>
+    var montaLink = document.getElementById('botaoSalvarFace');
+    montaLink.innerHTML = "<div class='fb-save' data-uri='" + URL + "' data-size='large'></div>";
+
+    </script>
+</body>
+
+</html>
