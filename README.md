@@ -1,4 +1,4 @@
-# concatenaURL
+# URI Dinâmica - Botão Salvar no Facebook
 Script para montar URL Dinâmica para o botão Salvar no Facebook - Javascript
 
 <b>1-</b> Trocar seu <b>appID</b>:
