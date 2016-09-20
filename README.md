@@ -13,7 +13,7 @@ Script para montar URL Dinâmica para o botão Salvar no Facebook - Javascript
     &lt;meta property="og:description" content="Sua Descrição" /&gt;
 </pre>
 
-<b>3-</b> Passar parâmetro que queria concatenar:<br>
+<b>3-</b> Passar parâmetro que queira concatenar:<br>
 <small style="color:red;"><i>*opcional</i></small>
 <pre>
     //string do parâmetro + valor da variável, exemplo: SKU / produto
