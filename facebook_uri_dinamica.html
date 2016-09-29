@@ -37,22 +37,11 @@
     
     <script type="text/javascript">
     
-    // Pega URL completa protocolo + host + pathname
-    var URL =
-        window.location.protocol + "//" +
-        window.location.host + "/" +
-        window.location.pathname;
-    
-    // pega parâmetro ?produto= + variável do SKU do produto /ou parâmetro que queira passar
-    var parametro = 
-        "?produto=" +
-        id-produto;
-
     // Pego a <div id='botaoSalvarFace'> que vai receber o botão
     // Monto o Link concatenando
     // Coloco ele dentro da <div id='botaoSalvarFace'>
     var montaLink = document.getElementById('botaoSalvarFace');
-    montaLink.innerHTML = "<div class='fb-save' data-uri='" + URL + parametro "' data-size='large'></div>";
+    montaLink.innerHTML = "<div class='fb-save' data-uri='" + window.location.href "' data-size='large'></div>";
 
     </script>
 </body>
